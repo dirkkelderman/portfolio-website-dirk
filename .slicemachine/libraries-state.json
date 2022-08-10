@@ -1,0 +1,504 @@
+{
+  "slices": {
+    "components": {
+      "call_to_action": {
+        "library": "slices",
+        "id": "call_to_action",
+        "name": "CallToAction",
+        "description": "CallToAction",
+        "model": {
+          "id": "call_to_action",
+          "type": "SharedSlice",
+          "name": "CallToAction",
+          "description": "CallToAction",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CallToAction",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Promised",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Proident do culpa excepteur. Mollit enim do non culpa.",
+                  "spans": []
+                }
+              ],
+              "button_text": "continued",
+              "link": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+              }
+            },
+            "slice_type": "call_to_action"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "home_hero": {
+        "library": "slices",
+        "id": "home_hero",
+        "name": "HomeHero",
+        "description": "HomeHero",
+        "model": {
+          "id": "home_hero",
+          "type": "SharedSlice",
+          "name": "HomeHero",
+          "description": "HomeHero",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HomeHero",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "heroText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Hero Text",
+                    "placeholder": "This is a text field for the hero",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Write",
+                  "spans": []
+                }
+              ],
+              "heroText": [
+                {
+                  "type": "paragraph",
+                  "text": "Et duis deserunt duis. Laborum ex esse ea ad labore elit minim fugiat. Laboris do dolor elit qui et.",
+                  "spans": []
+                }
+              ],
+              "button": "right",
+              "link": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+              }
+            },
+            "slice_type": "home_hero"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "home_top_section": {
+        "library": "slices",
+        "id": "home_top_section",
+        "name": "HomeTopSectionProjects",
+        "description": "HomeTopSection",
+        "model": {
+          "id": "home_top_section",
+          "type": "SharedSlice",
+          "name": "HomeTopSectionProjects",
+          "description": "HomeTopSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HomeTopSection",
+              "primary": {},
+              "items": {
+                "projectcard": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "ProjectCard",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "select": "document"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "projectcard": [
+                  {
+                    "type": "paragraph",
+                    "text": "Lorem incididunt qui ex dolore veniam tempor. Sunt sunt occaecat exercitation duis eu ex nisi in consectetur id veniam.",
+                    "spans": []
+                  }
+                ],
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+                },
+                "button": "rod",
+                "link": {
+                  "id": "mock_document_id",
+                  "link_type": "Document",
+                  "type": "mock",
+                  "tags": [],
+                  "lang": "en-us",
+                  "slug": null,
+                  "first_publication_date": "1970-01-01T00:00:01+0000",
+                  "last_publication_date": "1970-01-01T01:00:00+0000"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "home_top_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "project_card": {
+        "library": "slices",
+        "id": "project_card",
+        "name": "ProjectCard",
+        "description": "ProjectCard",
+        "model": {
+          "id": "project_card",
+          "type": "SharedSlice",
+          "name": "ProjectCard",
+          "description": "ProjectCard",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ProjectCard",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "projectid": {
+                  "type": "Link",
+                  "config": {
+                    "label": "ProjectId",
+                    "select": "document"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Operation",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Culpa sit pariatur cupidatat ut est laboris qui ut minim veniam consequat.",
+                  "spans": []
+                }
+              ],
+              "projectid": {
+                "id": "mock_document_id",
+                "link_type": "Document",
+                "type": "mock",
+                "tags": [],
+                "lang": "en-us",
+                "slug": null,
+                "first_publication_date": "1970-01-01T00:00:01+0000",
+                "last_publication_date": "1970-01-01T01:00:00+0000"
+              },
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+              }
+            },
+            "slice_type": "project_card"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "tech_stack_card": {
+        "library": "slices",
+        "id": "tech_stack_card",
+        "name": "TechStackCard",
+        "description": "TechStackCard",
+        "model": {
+          "id": "tech_stack_card",
+          "type": "SharedSlice",
+          "name": "TechStackCard",
+          "description": "TechStackCard",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TechStackCard",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Popular",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Aliqua pariatur esse consectetur aliqua quis cillum.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "tech_stack_card"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "project_page",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Count",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ea amet exercitation Lorem cupidatat. Aliquip fugiat ea ipsum id culpa est et adipisicing sunt non id tempor esse.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

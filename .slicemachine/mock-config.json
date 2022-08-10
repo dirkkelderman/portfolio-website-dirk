@@ -1,0 +1,43 @@
+{
+  "_cts": {
+    "home": {},
+    "project_page": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "home_page_section": {}
+  },
+  "slices": {
+    "HomeHero": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "heroText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "ProjectCard": {},
+    "TechStackCard": {},
+    "HomeTopSection": {},
+    "HomeTopSectionProjects": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "CallToAction": {}
+  }
+}

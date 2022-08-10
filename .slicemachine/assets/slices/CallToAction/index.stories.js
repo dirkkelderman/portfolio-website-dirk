@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/CallToAction';
+
+export default {
+  title: 'slices/CallToAction'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"heading1","text":"Promised","spans":[]}],"description":[{"type":"paragraph","text":"Proident do culpa excepteur. Mollit enim do non culpa.","spans":[]}],"button_text":"continued","link":{"link_type":"Web","url":"https://prismic.io"},"image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"}},"slice_type":"call_to_action","id":"_Default"}} />
+_Default.storyName = ''

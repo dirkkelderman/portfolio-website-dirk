@@ -1,30 +1,15 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText,PrismicLink } from '@prismicio/react'
 
 const CallToAction = ({ slice }) => (
   <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+    <h1>Call To Action</h1>
+    <PrismicRichText field={slice.variation.primary.title} />
+    <PrismicRichText field={slice.variation.primary.description} />
+    <span >{ slice.variation.primary.button_text }</span>
+    <PrismicLink  field={slice.variation.primary.link}>My Link</PrismicLink>
+    <img src={slice.variation.primary.image.url} alt={slice.variation.primary.image.alt} />
+
   </section>
 )
 

@@ -462,7 +462,25 @@
                   }
                 }
               },
-              "items": {},
+              "items": {
+                "icon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "tech_name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Tech Name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -472,20 +490,37 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9"
+                },
+                "tech_name": [
+                  {
+                    "type": "paragraph",
+                    "text": "Tempor in nostrud cillum sunt exercitation dolor pariatur culpa duis amet eu. Et cupidatat et incididunt nulla.",
+                    "spans": []
+                  }
+                ]
+              }
             ],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Popular",
+                  "text": "Practical",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Aliqua pariatur esse consectetur aliqua quis cillum.",
+                  "text": "Pariatur consectetur incididunt do fugiat aliquip dolore est cillum exercitation veniam occaecat id labore. Velit anim consectetur labore.",
                   "spans": []
                 }
               ]

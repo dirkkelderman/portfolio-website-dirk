@@ -4,11 +4,11 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className=" bg-slate-500">
+    <div className="container mx-auto ">
       <header>
         <h1 className="">Header</h1>
       </header>
-      <main>{children}</main>
+      <main className=" col-auto flex flex-col justify-center items-center">{children}</main>
       <footer>
         <p>&copy; {new Date().getFullYear()}</p>
       </footer>

@@ -22,9 +22,6 @@ interface HomePageProp {
 const Home = ({ homePage }: HomePageProp) => {
   return (
     <Layout>
-      <div className=" text-xl">
-        Hello
-      </div>
       <SliceZone components={components} slices={homePage.slices} />
     </Layout>
   );
@@ -66,6 +63,10 @@ export async function getStaticProps() {
                   variation {
                     __typename
                     ... on HomeSlicesTech_stack_cardDefault {
+                      items {
+                        icon
+                        tech_name
+                      }
                       primary {
                         title
                         description

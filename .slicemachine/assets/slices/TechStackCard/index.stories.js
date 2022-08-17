@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"heading1","text":"Popular","spans":[]}],"description":[{"type":"paragraph","text":"Aliqua pariatur esse consectetur aliqua quis cillum.","spans":[]}]},"slice_type":"tech_stack_card","id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"icon":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1589652717521-10c0d092dea9"},"tech_name":[{"type":"paragraph","text":"Tempor in nostrud cillum sunt exercitation dolor pariatur culpa duis amet eu. Et cupidatat et incididunt nulla.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Practical","spans":[]}],"description":[{"type":"paragraph","text":"Pariatur consectetur incididunt do fugiat aliquip dolore est cillum exercitation veniam occaecat id labore. Velit anim consectetur labore.","spans":[]}]},"slice_type":"tech_stack_card","id":"_Default"}} />
 _Default.storyName = ''

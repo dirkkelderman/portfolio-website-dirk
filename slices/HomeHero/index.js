@@ -3,7 +3,7 @@ import { PrismicRichText, PrismicLink } from "@prismicio/react";
 import Image from "next/image";
 
 const HomeHero = ({ slice }) => (
-  <section className="w-full relative h-80">
+  <section className="w-full relative h-80 lg:mb-52">
     <Image
       className=""
       src={slice.variation.primary.image.url}

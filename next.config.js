@@ -5,6 +5,10 @@ const nextConfig = {
   images: {
     domains: ["images.prismic.io"],
   },
+  env: {
+    NODE_EMAIL: process.env.NEXT_PUBLIC_NODE_EMAIL,
+    NODE_PASSWORD: process.env.NEXT_PUBLIC_NODE_PASSWORD,
+  },
 };
 
 module.exports = nextConfig;

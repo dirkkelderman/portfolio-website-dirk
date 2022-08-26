@@ -27,19 +27,20 @@
             "placeholder": "A nice description of your feature"
           }
         },
-        "projectid": {
-          "type": "Link",
-          "config": {
-            "label": "ProjectId",
-            "select": "document"
-          }
-        },
         "image": {
           "type": "Image",
           "config": {
             "label": "Image",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
           }
         }
       },

@@ -7,6 +7,7 @@ import { client } from "../prismicio";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../slices";
 import Layout from "../components/Layout";
+import Link from "next/link";
 
 interface HomePageProp {
   homePage: {
@@ -19,9 +20,23 @@ interface HomePageProp {
   };
 }
 
-const Home = ({ homePage }: HomePageProp) => {
+const Home = ({ homePage, links, newHomePageData }: HomePageProp) => {
+  // console.log(homePage);
+  console.log("homepage", newHomePageData);
+
   return (
     <Layout>
+      <ul>
+        {links?.map((link) => {
+          return (
+            <li key={link}>
+              <Link href={`projects/${link}`}>
+                <a href={`projects/${link}`}>{link}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
       <SliceZone components={components} slices={homePage.slices} />
     </Layout>
   );
@@ -47,9 +62,18 @@ export async function getStaticProps() {
                       primary {
                         title
                         description
-                        projectid {
+                        link {
                           _linkType
-                          __typename
+                          ... on _ExternalLink {
+                            url
+                            target
+                          }
+                          ... on _Document {
+                            _meta {
+                              id
+                              uid
+                            }
+                          }
                         }
                         image
                       }
@@ -129,9 +153,117 @@ export async function getStaticProps() {
     `,
   });
 
+  const allProjectPages = await client.query({
+    query: gql`
+      query {
+        allProject_pages {
+          edges {
+            node {
+              _meta {
+                uid
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  const newHomePageData = await client.query({
+    query: gql`
+      {
+        home(uid: "home", lang: "nl-nl") {
+          slices {
+            ... on HomeSlicesProject_card {
+              variation {
+                ... on HomeSlicesProject_cardDefault {
+                  primary {
+                    title
+                    description
+                    image
+                    link {
+                      _linkType
+                      ... on _Document {
+                        _meta {
+                          id
+                          uid
+                        }
+                      }
+                      ... on _ExternalLink {
+                        url
+                        target
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on HomeSlicesTech_stack_card {
+              variation {
+                ... on HomeSlicesTech_stack_cardDefault {
+                  primary {
+                    title
+                    description
+                  }
+                  items {
+                    icon
+                    tech_name
+                  }
+                }
+              }
+            }
+            ... on HomeSlicesCall_to_action {
+              variation {
+                ... on HomeSlicesCall_to_actionDefault {
+                  primary {
+                    title
+                    description
+                    button_text
+                    image
+                    link {
+                      _linkType
+                    }
+                  }
+                }
+              }
+            }
+            ... on HomeSlicesHome_hero {
+              variation {
+                ... on HomeSlicesHome_heroDefault {
+                  primary {
+                    title
+                    button
+                    image
+                    link {
+                      ... on _Document {
+                        _meta {
+                          id
+                          uid
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  const links = allProjectPages.data.allProject_pages.edges?.map((e: any) => {
+    return e?.node._meta.uid;
+  });
+
+  // console.log(homePageData.data.allHomes.edges[0].node);
+  console.log("homepage", newHomePageData);
+
   return {
     props: {
       homePage: homePageData.data.allHomes.edges[0].node,
+      links,
+      newHomePageData
     },
   };
 }

@@ -10,24 +10,24 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 
 interface HomePageProp {
+  links: any;
+  newHomePageData: any;
   homePage: {
     __typename: string;
     title: string;
     description: string;
-    slices: {
-      __typename: string;
-    }[];
+    slices: any
   };
 }
 
 const Home = ({ homePage, links, newHomePageData }: HomePageProp) => {
   // console.log(homePage);
-  console.log("homepage", newHomePageData);
+  // console.log("homepage", newHomePageData);
 
   return (
     <Layout>
       <ul>
-        {links?.map((link) => {
+        {links?.map((link: any) => {
           return (
             <li key={link}>
               <Link href={`projects/${link}`}>
@@ -257,13 +257,13 @@ export async function getStaticProps() {
   });
 
   // console.log(homePageData.data.allHomes.edges[0].node);
-  console.log("homepage", newHomePageData);
+  // console.log("homepage", newHomePageData);
 
   return {
     props: {
       homePage: homePageData.data.allHomes.edges[0].node,
       links,
-      newHomePageData
+      newHomePageData,
     },
   };
 }

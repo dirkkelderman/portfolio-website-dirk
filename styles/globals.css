@@ -4,4 +4,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  @apply bg-slate-100;
+
 }

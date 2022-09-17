@@ -43,7 +43,7 @@ const CallToAction = ({ slice }) => {
   };
 
   return (
-    <section className="flex bg-red-100 m-4 p-4 lg:mb-52">
+    <section className="flex bg-[#06D6A0] m-4 p-4 lg:mb-52">
       <div className="w-1/2 flex flex-col justify-center items-center">
         <PrismicRichText field={slice.variation.primary.title} />
         <PrismicRichText field={slice.variation.primary.description} />

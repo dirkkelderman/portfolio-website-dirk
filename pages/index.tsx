@@ -16,17 +16,17 @@ interface HomePageProp {
     __typename: string;
     title: string;
     description: string;
-    slices: any
+    slices: any;
   };
 }
 
 const Home = ({ homePage, links, newHomePageData }: HomePageProp) => {
   // console.log(homePage);
-  // console.log("homepage", newHomePageData);
+  console.log("homepage", newHomePageData);
 
   return (
     <Layout>
-      <ul>
+      {/* <ul>
         {links?.map((link: any) => {
           return (
             <li key={link}>
@@ -36,7 +36,7 @@ const Home = ({ homePage, links, newHomePageData }: HomePageProp) => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       <SliceZone components={components} slices={homePage.slices} />
     </Layout>
   );
@@ -172,79 +172,114 @@ export async function getStaticProps() {
   const newHomePageData = await client.query({
     query: gql`
       {
-        home(uid: "home", lang: "nl-nl") {
-          slices {
-            ... on HomeSlicesProject_card {
-              variation {
-                ... on HomeSlicesProject_cardDefault {
-                  primary {
-                    title
-                    description
-                    image
-                    link {
-                      _linkType
-                      ... on _Document {
-                        _meta {
-                          id
-                          uid
+        allHomes {
+          edges {
+            node {
+              slices {
+                __typename
+                ... on HomeSlicesProject_card {
+                  type
+                  label
+                  variation {
+                    __typename
+                    ... on HomeSlicesProject_cardDefault {
+                      primary {
+                        title
+                        description
+                        internal_link {
+                          _linkType
+                          ... on _Document {
+                            _meta {
+                              id
+                              uid
+                              type
+                            }
+                          }
                         }
-                      }
-                      ... on _ExternalLink {
-                        url
-                        target
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            ... on HomeSlicesTech_stack_card {
-              variation {
-                ... on HomeSlicesTech_stack_cardDefault {
-                  primary {
-                    title
-                    description
-                  }
-                  items {
-                    icon
-                    tech_name
-                  }
-                }
-              }
-            }
-            ... on HomeSlicesCall_to_action {
-              variation {
-                ... on HomeSlicesCall_to_actionDefault {
-                  primary {
-                    title
-                    description
-                    button_text
-                    image
-                    link {
-                      _linkType
-                    }
-                  }
-                }
-              }
-            }
-            ... on HomeSlicesHome_hero {
-              variation {
-                ... on HomeSlicesHome_heroDefault {
-                  primary {
-                    title
-                    button
-                    image
-                    link {
-                      ... on _Document {
-                        _meta {
-                          id
-                          uid
+                        link {
+                          _linkType
+                          ... on _ExternalLink {
+                            url
+                            target
+                          }
+                          ... on _Document {
+                            _meta {
+                              id
+                              uid
+                            }
+                          }
                         }
+                        image
+                      }
+                    }
+                  }
+                }
+                __typename
+                ... on HomeSlicesTech_stack_card {
+                  type
+                  label
+                  variation {
+                    __typename
+                    ... on HomeSlicesTech_stack_cardDefault {
+                      items {
+                        icon
+                        tech_name
+                      }
+                      primary {
+                        title
+                        description
+                      }
+                    }
+                  }
+                }
+                __typename
+                ... on HomeSlicesCall_to_action {
+                  type
+                  label
+                  variation {
+                    __typename
+                    ... on HomeSlicesCall_to_actionDefault {
+                      primary {
+                        title
+                        description
+                        button_text
+                        link {
+                          _linkType
+                          __typename
+                        }
+                        image
+                      }
+                    }
+                  }
+                }
+                __typename
+                ... on HomeSlicesHome_hero {
+                  type
+                  label
+                  variation {
+                    __typename
+                    ... on HomeSlicesHome_heroDefault {
+                      primary {
+                        title
+                        button
+                        link {
+                          _linkType
+                          __typename
+                        }
+                        image
                       }
                     }
                   }
                 }
               }
+              _meta {
+                id
+                uid
+                type
+                tags
+                lang
+              }
+              _linkType
             }
           }
         }
@@ -257,7 +292,8 @@ export async function getStaticProps() {
   });
 
   // console.log(homePageData.data.allHomes.edges[0].node);
-  // console.log("homepage", newHomePageData);
+  console.log("homepage", newHomePageData);
+  console.log(links);
 
   return {
     props: {

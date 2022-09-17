@@ -4,7 +4,7 @@ import { gql } from "@apollo/client";
 // import client from "../apollo-client";
 import { client } from "../../prismicio";
 
-function ProjectPage() {
+function ProjectPage({ }) {
   return (
     <div>ProjectPage</div>
   )

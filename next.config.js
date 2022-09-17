@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["images.prismic.io"],
+    domains: ["images.prismic.io", "cdn.searchenginejournal.com"], 
   },
   env: {
     NODE_EMAIL: process.env.NEXT_PUBLIC_NODE_EMAIL,

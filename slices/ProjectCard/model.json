@@ -42,6 +42,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "internal_link": {
+          "type": "Link",
+          "config": {
+            "label": "Internal Link",
+            "select": "document"
+          }
         }
       },
       "items": {},

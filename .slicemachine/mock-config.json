@@ -9,7 +9,18 @@
         }
       }
     },
-    "home_page_section": {}
+    "home_page_section": {},
+    "menu": {
+      "projectMenuLinks": {
+        "label": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      }
+    },
+    "contact": {}
   },
   "slices": {
     "HomeHero": {
@@ -42,6 +53,14 @@
         "primary": {}
       }
     },
-    "CallToAction": {}
+    "CallToAction": {},
+    "ProjectImageCard": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ProjectDescriptionCard": {},
+    "ProjectHero": {},
+    "ContactForm": {}
   }
 }

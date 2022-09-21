@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const TechStackCard = ({ slice }) => {
-  const TechStackIcons = slice.variation.items.map((item, i) => {
+  const TechStackIcons = slice.items.map((item, i) => {
     return (
       <span key={i} className="flex items-center justify-around ">
         <Image
@@ -29,7 +29,7 @@ const TechStackCard = ({ slice }) => {
         scale: 1.1,
         transition: { duration: 1 },
       }}
-      className="lg:w-72 relative lg:left-48 h-96 m-10 lg:-mt-40 shadow-2xl"
+      className="lg:w-96 relative lg:left-48 h-96 m-10 lg:-mt-40 shadow-2xl z-10"
     >
       <div className="absolute h-full w-full shadow-2xl">
         <Image
@@ -47,7 +47,7 @@ const TechStackCard = ({ slice }) => {
         </div>
 
         <div className="border-t-2 border-black mx-4 py-3 mb-3">
-          <PrismicRichText field={slice.variation.primary.title} />
+          <PrismicRichText field={slice.primary.title} />
         </div>
       </div>
     </motion.section>

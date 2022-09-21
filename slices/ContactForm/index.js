@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
-const HomeTopSection = ({ slice }) => (
+const ContactForm = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -28,4 +28,4 @@ const HomeTopSection = ({ slice }) => (
   </section>
 )
 
-export default HomeTopSection
+export default ContactForm

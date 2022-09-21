@@ -5,7 +5,7 @@ import { createClient } from "../prismicio";
 
 interface HomePageProp {
   menu: any;
-  homePage: {
+  contactPage: {
     __typename: string;
     title: string;
     description: string;
@@ -16,10 +16,11 @@ interface HomePageProp {
   };
 }
 
-const Home = ({ homePage, menu }: HomePageProp) => {
+const Home = ({ contactPage, menu }: HomePageProp) => {
   return (
     <Layout menu={menu}>
-      <SliceZone components={components} slices={homePage.data.slices} />
+        Contact
+      <SliceZone components={components} slices={contactPage.data.slices} />
     </Layout>
   );
 };
@@ -29,12 +30,12 @@ export default Home;
 export async function getStaticProps({ previewData }: any) {
   const client = createClient({ previewData });
 
-  const homePage = await client.getSingle("home");
+  const contactPage = await client.getSingle("contact");
   const menu = await client.getSingle("menu");
 
   return {
     props: {
-      homePage,
+      contactPage,
       menu,
     },
   };

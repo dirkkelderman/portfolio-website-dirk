@@ -63,13 +63,13 @@ const ProjectCard = ({ slice }) => {
         amount: 0.5,
       }}
       transition={{ staggerChildren: 0.5 }}
-      className="lg:w-72 relative lg:right-48 h-96 m-10 lg:-mt-40 first:mt-40 "
+      className="lg:w-3/6 relative lg:right-48 h-96 m-10 lg:-mt-40 first:mt-40 "
     >
       <motion.div variants={cardAnimation} className="absolute h-full w-full ">
         <Image
           className=""
-          src={slice.variation.primary.image.url}
-          alt={slice.variation.primary.image.alt}
+          src={slice.primary.image.url}
+          alt={slice.primary.image.alt}
           layout="fill"
           objectFit="cover"
         />
@@ -80,17 +80,16 @@ const ProjectCard = ({ slice }) => {
         className="flex flex-col justify-end w-full h-full bg-[#EF476F] top-0 left-0 opacity-90 font-medium z-10 shadow-2xl"
       >
         <motion.div variants={textAnimation} className="py-3 mx-4 font-bold">
-          <PrismicRichText field={slice.variation.primary.title} />
+          <PrismicRichText field={slice.primary.title} />
         </motion.div>
 
         <div className="border-t-2 border-black mx-4">
           <motion.div variants={textAnimation}>
-            <PrismicRichText field={slice.variation.primary.description} />
+            <PrismicRichText field={slice.primary.description} />
           </motion.div>
-          <motion.button variants={textAnimation} className="py-1">
-            Click Here
-            <PrismicLink document={slice.variation.primary.link}>
-              My Link
+          <motion.button variants={textAnimation} className="py-1 underline">
+            <PrismicLink document={slice.primary.internal_link}>
+              Check out this project
             </PrismicLink>
           </motion.button>
         </div>

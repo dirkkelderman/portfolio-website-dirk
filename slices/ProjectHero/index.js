@@ -1,10 +1,9 @@
-import React from "react";
-import { PrismicRichText, PrismicLink } from "@prismicio/react";
-import Image from "next/image";
+import React from 'react'
+import { PrismicRichText } from '@prismicio/react'
+import Image from 'next/image'
 
-const HomeHero = ({ slice }) => {
-  return (
-    <section className="w-full relative h-80 lg:mb-52 shadow-2xl">
+const ProjectHero = ({ slice }) => (
+  <section className="w-full relative h-80 lg:mb-52 shadow-2xl">
       <Image
         className=""
         src={slice.primary.image.url}
@@ -21,7 +20,6 @@ const HomeHero = ({ slice }) => {
         </div>
       </div>
     </section>
-  );
-};
+)
 
-export default HomeHero;
+export default ProjectHero

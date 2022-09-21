@@ -34,7 +34,23 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "project_card": {
+              "type": "SharedSlice"
+            },
+            "project_description_card": {
+              "type": "SharedSlice"
+            },
+            "project_hero": {
+              "type": "SharedSlice"
+            },
+            "project_image_card": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     }

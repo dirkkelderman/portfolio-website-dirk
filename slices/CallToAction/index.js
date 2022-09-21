@@ -45,9 +45,9 @@ const CallToAction = ({ slice }) => {
   return (
     <section className="flex bg-[#06D6A0] m-4 p-4 lg:mb-52">
       <div className="w-1/2 flex flex-col justify-center items-center">
-        <PrismicRichText field={slice.variation.primary.title} />
-        <PrismicRichText field={slice.variation.primary.description} />
-        <span>{slice.variation.primary.button_text}</span>
+        <PrismicRichText field={slice.primary.title} />
+        <PrismicRichText field={slice.primary.description} />
+        <span>{slice.primary.button_text}</span>
         <form className="flex flex-col w-2/3" onSubmit={handleSubmit}>
           <input
             className="m-2"
@@ -83,13 +83,13 @@ const CallToAction = ({ slice }) => {
           </div>
         </form>
 
-        <PrismicLink field={slice.variation.primary.link}>My Link</PrismicLink>
+        <PrismicLink field={slice.primary.link}>My Link</PrismicLink>
       </div>
 
       <div className="w-1/2">
         <img
-          src={slice.variation.primary.image.url}
-          alt={slice.variation.primary.image.alt}
+          src={slice.primary.image.url}
+          alt={slice.primary.image.alt}
         />
       </div>
     </section>
